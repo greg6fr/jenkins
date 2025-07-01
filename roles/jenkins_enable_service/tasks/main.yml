@@ -1,0 +1,6 @@
+---
+- name: Activer Jenkins au démarrage
+  systemd:
+    name: jenkins
+    enabled: yes
+    state: started

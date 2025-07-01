@@ -1,0 +1,5 @@
+---
+- name: Installer UFW
+  apt:
+    name: ufw
+    state: present

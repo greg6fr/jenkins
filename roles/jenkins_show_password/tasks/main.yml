@@ -1,0 +1,7 @@
+---
+- name: Afficher le mot de passe initial de Jenkins
+  ansible.builtin.shell: cat /var/lib/jenkins/secrets/initialAdminPassword
+  register: jenkins_password
+- name: Affichage du mot de passe Jenkins
+  debug:
+    msg: "Mot de passe Jenkins : {{ jenkins_password.stdout }}"

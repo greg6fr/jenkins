@@ -1,0 +1,8 @@
+---
+- name: Autoriser le port 8080 dans UFW
+  ufw:
+    rule: allow
+    port: 8080
+    proto: tcp
+- name: Recharger UFW
+  command: ufw reload

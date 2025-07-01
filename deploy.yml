@@ -1,0 +1,17 @@
+---
+- name: Installer et configurer Jenkins sur Debian 12
+  hosts: jenkins
+  become: yes
+
+  roles:
+    - system_update
+    - ufw_install
+    - ufw_configure
+    - curl_install
+    - openjdk_install
+    - jenkins_gpg_key
+    - jenkins_repo
+    - jenkins_update_cache
+    - jenkins_install
+    - jenkins_enable_service
+    - jenkins_show_password
