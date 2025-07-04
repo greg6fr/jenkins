@@ -15,3 +15,5 @@
     - jenkins_install
     - jenkins_enable_service
     - jenkins_show_password
+    - jenkins_docker_group
+
